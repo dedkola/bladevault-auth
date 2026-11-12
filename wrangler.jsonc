@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Keeps the existing Worker name so a deploy replaces the live code on
+  // auth.bladevault.pro and reuses its secrets and custom domain.
+  "name": "bladevault-backend",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-25",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    {
+      "pattern": "auth.bladevault.pro",
+      "custom_domain": true,
+    },
+  ],
+  "vars": {
+    "AUTH_PUBLIC_BASE_URL": "https://auth.bladevault.pro",
+    // Self-hosted BladeVault servers can run on any address, so every origin
+    // may start a sign-in. PKCE keeps a returned code useless to anyone but
+    // the server that started it. Set a comma-separated list to restrict it.
+    "ALLOWED_CLIENT_ORIGINS": "*",
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "secrets": {
+    "required": ["GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET"],
+  },
+}

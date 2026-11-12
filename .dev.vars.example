@@ -1,0 +1,9 @@
+# Copy to .dev.vars for `npm run dev`. Never commit real values.
+GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-client-secret
+# Local sign-in needs the callback on the dev server, and Google must list
+# http://localhost:8787/auth/drive/callback as an authorised redirect URI.
+AUTH_PUBLIC_BASE_URL=http://localhost:8787
+# Optional
+# SENTRY_DSN=
+# SENTRY_ENVIRONMENT=development

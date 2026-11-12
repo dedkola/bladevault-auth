@@ -1,0 +1,9 @@
+node_modules
+.wrangler
+.wrangler-dist
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.env
+.env.*
+.DS_Store
