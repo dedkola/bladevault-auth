@@ -1,0 +1,36 @@
+name: Bug report
+description: Something in Google Drive sign-in is not working
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open BladeVault settings
+        2. Click "Connect Google Drive"
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: hosting
+    attributes:
+      label: BladeVault hosting
+      options:
+        - Hosted (bladevault.pro)
+        - Self-hosted
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error messages or logs
+      description: Remove any tokens, codes or emails before pasting.
+      render: text
