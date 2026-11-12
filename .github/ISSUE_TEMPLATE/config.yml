@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: BladeVault app issues
+    url: https://github.com/dedkola/bladevault/issues
+    about: Problems with the BladeVault app itself belong in the main repo.
+  - name: BladeVault website
+    url: https://bladevault.pro
+    about: Learn more about BladeVault.
+  - name: Report a security vulnerability
+    url: https://github.com/dedkola/bladevault-auth/security/advisories/new
+    about: Please report security issues privately.
